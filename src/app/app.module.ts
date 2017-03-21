@@ -5,10 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PhoneListPageComponent } from './phone-list-page/phone-list-page.component';
+import { PhoneDetailsPageComponent } from './phone-details-page/phone-details-page.component';
+import { PhonesService } from './phones.service'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PhoneListPageComponent,
+    PhoneDetailsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -16,7 +21,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PhonesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
